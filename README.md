@@ -6,7 +6,7 @@
 
 ### Put ThingSpeak API KEY for your channel in the code then start a service as below.
 
-### It needs pyinstaller to conver the python to a Windows executable.
+### It needs pyinstaller to convert the python code to a Windows executable.
 #### >> pip install pyinstaller
 #### >> pyinstaller -F --hidden-import=win32timezone ThingSpeakLogger.py
 
