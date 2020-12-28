@@ -2,18 +2,18 @@
 
 ### Reference code: https://gist.github.com/guillaumevincent/d8d94a0a44a7ec13def7f96bfb713d3f
 
-* It can be registered as a Windows Service and send cpu and memory usage to a thingspeak channel regularlly. 
+### It can be registered as a Windows Service and send cpu and memory usage to a thingspeak channel regularlly. 
 
-* It needs pyinstaller to conver the python to a Windows executable.
-** >> pip install pyinstaller
-** >> pyinstaller -F --hidden-import=win32timezone ThingSpeakLogger.py
+### It needs pyinstaller to conver the python to a Windows executable.
+#### >> pip install pyinstaller
+#### >> pyinstaller -F --hidden-import=win32timezone ThingSpeakLogger.py
 
-* Register it as a service, start, stop and remove as you want.
-** >> dist\ThingSpeakLogger.exe install
-** >> dist\ThingSpeakLogger.exe start
-** >> dist\ThingSpeakLogger.exe stop
-** >> dist\ThingSpeakLogger.exe semove
+### Register it as a service, start, stop and remove as you want.
+#### >> dist\ThingSpeakLogger.exe install
+#### >> dist\ThingSpeakLogger.exe start
+#### >> dist\ThingSpeakLogger.exe stop
+#### >> dist\ThingSpeakLogger.exe semove
 
-* You can make it start automatically in the service manager by changing the start type to Auto.
+### You can make it start automatically in the service manager by changing the start type to Auto.
 
-* Then, you can monitor your computer usage in you cell phone app, <span style="color:blue">ThingView</span>.
+### Then, you can monitor your computer usage in you cell phone app, <span style="color:blue">ThingView</span>.
