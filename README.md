@@ -1,4 +1,4 @@
-# ThingSpeakWinMonitor"
+# ThingSpeakWinMonitor
 
 ### Reference code: https://gist.github.com/guillaumevincent/d8d94a0a44a7ec13def7f96bfb713d3f
 
