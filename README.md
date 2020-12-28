@@ -15,3 +15,5 @@
 #### >> dist\ThingSpeakLogger.exe semove
 
 ### You can make it start automatically in the service manager by changing the start type to Auto.
+
+### Then, you can monitor your computer usage in you cell phone app, <span style="color:blue">ThingView</span>.
