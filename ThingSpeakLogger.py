@@ -24,7 +24,6 @@ class ThingSpeakLogService(win32serviceutil.ServiceFramework):
     def SvcDoRun(self):
         rc = None
         while rc != win32event.WAIT_OBJECT_0:
-            # threading.Timer(10, thingspeak_post).start()
             val_cpu_usage = psutil.cpu_percent()
             val_mem_usage = psutil.virtual_memory().percent
             BASEURL = 'https://api.thingspeak.com/update?api_key='
