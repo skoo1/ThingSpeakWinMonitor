@@ -7,10 +7,11 @@ import win32serviceutil
 import requests
 import psutil
 
+
 class ThingSpeakLogService(win32serviceutil.ServiceFramework):
-    _svc_name_ = "ThingSpeakLogService"
-    _svc_display_name_ = "ThingSpeakLog Service"
-    _svc_description_ = "ThingSpeak Logger by skoo"
+    _svc_name_ = "ThingSpeakLogService"   # <--- whatever you want
+    _svc_display_name_ = "ThingSpeakLog Service"    # <--- whatever you want
+    _svc_description_ = "ThingSpeak Logger by skoo"    # <--- whatever you want
 
     def __init__(self, args):
         win32serviceutil.ServiceFramework.__init__(self, args)
@@ -24,6 +25,7 @@ class ThingSpeakLogService(win32serviceutil.ServiceFramework):
     def SvcDoRun(self):
         rc = None
         while rc != win32event.WAIT_OBJECT_0:
+            # write what your service should do ---- START -----
             val_cpu_usage = psutil.cpu_percent()
             val_mem_usage = psutil.virtual_memory().percent
             BASEURL = 'https://api.thingspeak.com/update?api_key='
@@ -31,9 +33,12 @@ class ThingSpeakLogService(win32serviceutil.ServiceFramework):
             VALUES = '&field1={}&field2={}'.format(val_cpu_usage, val_mem_usage)
             postURL = BASEURL + THINGSPEAK_APIKEY + VALUES
             data = requests.post(postURL)
-            with open('C:\\Users\\XXXXX\Works\ThingSpeakLogService.log', 'a') as f:   # <--- Put log file path
-                f.write(postURL)
-                f.write('\n')
+            # write what your service should do ---- END -----
+
+            # write the message to your local storage if you want
+            # with open('C:\\Users\\XXXXX\Works\ThingSpeakLogService.log', 'a') as f:   # <--- Put log file path
+            #     f.write(postURL)
+            #     f.write('\n')
             rc = win32event.WaitForSingleObject(self.hWaitStop, 20000)   # <--- Logging interval
 
 
