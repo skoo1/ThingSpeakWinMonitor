@@ -10,7 +10,7 @@
 #### >> pip install pyinstaller
 #### >> pyinstaller -F --hidden-import=win32timezone ThingSpeakLogger.py
 
-### Register it as a service. Start, stop and remove as you want.
+### Register it as a service. Start, stop and remove as you want. You should do it in a console with admin privilege.
 #### >> dist\ThingSpeakLogger.exe install
 #### >> dist\ThingSpeakLogger.exe start
 #### >> dist\ThingSpeakLogger.exe stop
