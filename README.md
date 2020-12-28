@@ -4,6 +4,8 @@
 
 ### It can be registered as a Windows Service and send cpu and memory usage to a thingspeak channel regularlly. 
 
+### Put ThingSpeak API KEY for your channel in the code then start a service as below.
+
 ### It needs pyinstaller to conver the python to a Windows executable.
 #### >> pip install pyinstaller
 #### >> pyinstaller -F --hidden-import=win32timezone ThingSpeakLogger.py
